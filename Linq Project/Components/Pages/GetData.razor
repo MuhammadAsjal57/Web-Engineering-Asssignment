@@ -1,0 +1,14 @@
+﻿@inject GetDataServices GetDataServices
+<h3>GetData</h3>
+
+@code {
+    protected override void OnInitialized()
+    {
+        GetDataServices.classesWithMoreThan100Students();
+        GetDataServices.GetIdandMajor();
+        GetDataServices.studentsEnrolledInMoreThanTwoClasses();
+        GetDataServices.facultyWithClassCounts();
+        GetDataServices.studentsInComputerScienceClasses();
+        base.OnInitialized();
+    }
+}

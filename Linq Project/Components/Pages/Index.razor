@@ -1,0 +1,180 @@
+﻿@page "/buttonpage"
+@inject GetDataServices GetDataServices
+<h3>Welcome to the Button Page</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <submit class="btn btn-primary" onclick="() => ButtonClick(1)">>Button 1</submit>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-success" onclick="() => ButtonClick(2)">>Button 2</button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-info" onclick="() => ButtonClick(3)">>Button 3</button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-warning" onclick="() => ButtonClick(4)">>Button 4</button>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-danger" onclick="() => ButtonClick(5)">>Button 5</button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            @if (capturedValue == 1)
+            {
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>Class Name </th>
+                            <th>rOOM nO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in response)
+                        {
+                            <tr>
+                                <td>@item.outPut1</td>
+                                <td>@item.outPut2</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else if (capturedValue == 2)
+            {
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Major</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in response)
+                        {
+                            <tr>
+                                <td>@item.outPut1</td>
+                                <td>@item.outPut2</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else if (capturedValue == 3)
+            {
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Number Of classes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in response)
+                        {
+                            <tr>
+                                <td>@item.outPut1</td>
+                                <td>@item.outPut2</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else if (capturedValue == 4)
+            {
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>Faculty Name</th>
+                            <th>Number Of Classes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in response)
+                        {
+                            <tr>
+                                <td>@item.outPut1</td>
+                                <td>@item.outPut2</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else if (capturedValue == 5)
+            {
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in response)
+                        {
+                            <tr>
+                                <td>@item.outPut1</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private int? capturedValue;
+    public List<response> response;
+    public void click(){
+
+    }
+    private void ButtonClick(int i)
+    {
+        switch (i)
+        {
+            case 1:
+                response =GetDataServices.classesWithMoreThan100Students();
+                if (response != null)
+                {
+                    capturedValue = 1;
+                    StateHasChanged();
+                }
+                break;
+            case 2:
+                response = GetDataServices.GetIdandMajor();
+                if (response != null)
+                {
+                    capturedValue = 2;
+                    StateHasChanged();
+                }
+            break;
+            case 3:
+                response = GetDataServices.studentsEnrolledInMoreThanTwoClasses();
+                if (response != null)
+                {
+                    capturedValue = 3;
+                    StateHasChanged();
+                }
+                break;
+            case 4:
+                response = GetDataServices.facultyWithClassCounts();
+                if (response != null)
+                {
+                    capturedValue = 4;
+                    StateHasChanged();
+                }
+                break;
+            case 5:
+                response = GetDataServices.studentsInComputerScienceClasses();
+                if (response != null)
+                {
+                    capturedValue = 5;
+                    StateHasChanged();
+                }
+                break;
+        }
+    }
+}

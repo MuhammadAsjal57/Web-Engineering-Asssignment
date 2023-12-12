@@ -1,0 +1,21 @@
+﻿** Highlights
+     Tables that will be recreated with data migrated
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Class] (Table)
+       [dbo].[Enrolled] (Table)
+       [dbo].[Faculty] (Table)
+       [dbo].[Student] (Table)
+       [dbo].[FK_Class_Faculty] (Foreign Key)
+       [dbo].[FK_Enrolled_Student] (Foreign Key)
+       [dbo].[FK_Enrolled_Class] (Foreign Key)
+
+** Supporting actions

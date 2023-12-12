@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Dicta\\source\\repos\\Linq Project\\Linq Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Linq_Project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Linq_Project.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Dicta\\source\\repos\\Linq Project\\Linq Project\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Dicta\\source\\repos\\Linq Project\\Linq Project\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Dicta\\source\\repos\\Linq Project\\Linq Project\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Dicta\\source\\repos\\Linq Project\\Linq Project\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Linq_Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Linq_Project.props",
+      "PackagePath": "build\\Linq_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Linq_Project.props",
+      "PackagePath": "buildMultiTargeting\\Linq_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Linq_Project.props",
+      "PackagePath": "buildTransitive\\Linq_Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

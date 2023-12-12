@@ -1,0 +1,29 @@
+﻿@page "/AddData"
+@inject AddDataService AddDataService
+<h3>AddData</h3>
+@if (!IsLoading)
+{
+    <div class="spinner-border text-primary" role="status">
+        
+    </div>
+}
+
+@code {
+    public bool IsLoading = false;
+    bool isAdded = false;
+    protected override void OnInitialized()
+    {
+
+        isAdded = AddDataService.addFaculty();
+        if (isAdded)
+        {
+            
+            IsLoading = true;
+        }
+        else
+        {
+            isAdded = false;
+        }
+        base.OnInitialized();
+    }
+}
